@@ -1,6 +1,6 @@
 package pru03.E02;
 
-public class PRU03E02TestCotxe_nom_llinatge {
+public class PRU03E02TestCotxe_diego_ponce {
 
 	public static void main(String[] args) throws Exception {
 		
@@ -10,7 +10,7 @@ public class PRU03E02TestCotxe_nom_llinatge {
 		//----------------------------------------------------------------------------------------------------------------------------
 		coche1.arrancarMotor();//"ACTIVAMOS" EL METODO (ARRANCAR) PARA QUE ARRANQUE AL EJECUTAR EL PROGRAMA.
 		
-		System.out.println("El motor est· " +coche1.comprovaMotor());//YA QUE EL COCHE ESTA ARRANCADO, COMPRUEBA EL ESTADO DEL MOTOR
+		System.out.println("El motor est√° " +coche1.comprovaMotor());//YA QUE EL COCHE ESTA ARRANCADO, COMPRUEBA EL ESTADO DEL MOTOR
 		
 		System.out.println("Las revoluciones del motor son " +coche1.getRevolucions());//AQUI MUESTRA EL VALOR ALEATORIO QUE HE CREADO EN LA CLASE 'Cotxe_diego_ponce'
 		
