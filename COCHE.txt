@@ -1,0 +1,61 @@
+package pru03.E02;
+
+public class PRU03E03Cotxe_CamviMarcha_diego_ponce extends PRU03E02Cotxe_diego_ponce implements InterfaceCotxe {
+
+	public PRU03E03Cotxe_CamviMarcha_diego_ponce(String marca, String modelo, TipusCanvi tipuscanvi) {
+		super(marca, modelo, tipuscanvi);
+	
+		this.marca=marca;
+		this.modelo=modelo;
+		this.tipuscanvi=tipuscanvi;
+	}
+
+	public enum MarxaAutomatic {
+		F,
+		N,
+		R;
+	}
+	
+	
+	public MarxaAutomatic CanviarMarxaAutomatic(char cambiar){
+		EstatsMotorCotxe motor=EstatsMotorCotxe.EnMarcha;
+		MarxaAutomatic marxa=MarxaAutomatic.N;
+		if (motor.equals(EstatsMotorCotxe.EnMarcha)) {
+			if (marxa.equals(MarxaAutomatic.N)) {
+				if(cambiar == '+') {
+				if(MarxaAutomatic.N.equals(marxa)) {
+					
+				}else if(cambiar == '-') {
+					
+				}
+				}
+		return marxa;	
+	}
+
+	public enum MarxaManual {
+		primera,segunda,tercera,cuarta,quinta,sesta, R;
+	}
+	
+	public MarxaManual CanviarMarxaManual(char cambiar) throws Exception {
+		EstatsMotorCotxe motor=EstatsMotorCotxe.EnMarcha;
+		MarxaManual marxa=MarxaManual.primera;
+		if (motor.equals(EstatsMotorCotxe.EnMarcha)) {
+			if (marxa.equals(MarxaManual.primera)) {
+			
+				if (cambiar=='+') {
+					marxa=MarxaManual.segunda;
+				}
+				else if (cambiar=='-') {
+					marxa=MarxaManual.R;
+				}
+			}	
+			}		
+		else {
+			throw new Exception ("No sirve de nada cambiar de marcha si el coche esta apagado");
+		}
+		return marxa;
+	}
+
+
+
+}
